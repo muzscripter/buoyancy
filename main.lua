@@ -5,11 +5,18 @@ local Oceans = workspace:WaitForChild('Oceans') -- // Anything here will have a 
 
 --[[
     When a part in the act of colliding with water, 
-    any object will have a force pushing up against gravity this is called buoyancy.
+    any object will have a force pushing up against gravity this is called buoyancy
 ]]
+https://www.youtube.com/watch?v=qF_3la-gFbU
+-- coming soon gang
+local function SetupBuoyancy(WaterPart)
+    WaterPart.Touched:Connect(function(Part)
+        local PartMass = Part:GetMass()
 
-local function SetupBuoyancy(Part)
-    local BodyGyro
+        local UpwardForce = Instance.new('BodyVelocity')
+        UpwardForce.Velocity = Vector3.new(0, -5, 0)
+
+    end)
 end
 
 for Properties, Part in pairs(Oceans:GetChildren()) do
