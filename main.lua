@@ -5,7 +5,7 @@ local Oceans = workspace:WaitForChild('Oceans') -- // Anything here will have a 
 
 --[[
     When a part in the act of colliding with water, 
-    any object will have a force pushing up against gravity
+    any object will have a force pushing up against gravity this is called buoyancy.
 ]]
 
 local function SetupBuoyancy(Part)
